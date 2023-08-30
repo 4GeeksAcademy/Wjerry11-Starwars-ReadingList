@@ -106,7 +106,7 @@ const getState = ({ getStore, getActions, setStore }) => {
           return elm;
         });
 
-        //reset the global store
+      
         setStore({ demo: demo });
       },
     },

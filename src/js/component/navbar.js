@@ -5,9 +5,9 @@ import { Context } from "../store/appContext";
 export const Navbar = () => {
   const { store, actions } = useContext(Context);
   return (
-    <nav className="navbar  mb-3">
+    <nav className="navbar  ml-0">
       <Link to="/">
-        <span className="navbar-brand mb-0 h1">
+        <span className="navbar-brand px-0 ">
           {" "}
           <img
             className="starWarsLogo"
@@ -15,7 +15,7 @@ export const Navbar = () => {
           />
         </span>
       </Link>
-      <div className="ml-auto">
+      <div className="px-5">
         <div class="dropdown">
           <button
             class="btn btn-warning dropdown-toggle"
@@ -25,13 +25,13 @@ export const Navbar = () => {
           >
             favorites
           </button>
-          <ul class="dropdown-menu">
+          <ul class="dropdown-menu ">
             {store.favorites.map((item, index) => {
               return (
                 <li>
                   <span>{item}</span>
                   <button onClick={() => actions.removeFavorite(index)}>
-                    del
+                    X
                   </button>
                 </li>
               );
